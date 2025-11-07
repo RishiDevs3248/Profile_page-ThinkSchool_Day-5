@@ -1,0 +1,257 @@
+/*
+===================================== 
+Univarsal reset
+===================================== 
+*/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: monospace, cursive;
+}
+
+/*
+===================================== 
+NAV BAR 
+===================================== 
+*/
+
+#nav_container {
+  position: fixed;
+  top: 0px;
+  padding: 24px 48px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  width: 100%;
+  background-color: #f2ede6;
+  border-bottom: 0.2px solid black;
+}
+
+#nav_container div {
+  display: flex;
+}
+
+#nav_container div a {
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-self: center;
+}
+
+#nav_image_div_tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  height: 48px;
+  width: 48px;
+  border-radius: 8px;
+  background: #000;
+  font-size: 24px;
+}
+
+#nav_name_p_tag {
+  font-size: 24px;
+  padding-left: 16px;
+}
+
+#nav_container nav {
+  font-size: 16px;
+  display: flex;
+  align-self: center;
+  gap: 24px;
+}
+
+#nav_container nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+#nav_container nav a:nth-child(1)::after {
+  display: block;
+  margin-top: 5px;
+  content: "";
+  height: 4px;
+  width: 0%;
+  background-color: #000;
+  border-radius: 2px;
+  animation: nav_width 1s forwards;
+}
+
+@keyframes nav_width {
+  to {
+    width: 100%;
+  }
+}
+
+/* 
+    ===================================== 
+    Hero Section 1
+    ===================================== 
+*/
+
+#hero_section_1_container {
+  height: 100vh;
+  width: 100vw;
+  padding: 96px;
+  padding-top: 104px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 0;
+  border-bottom: 0.2px solid black;
+}
+
+#hero_section_1_text_container {
+  text-align: center;
+}
+
+#hero_section_1_Header {
+  font-family: cursive;
+  font-size: 40px;
+}
+
+#hero_section_1_desc {
+  color: #868e96;
+}
+
+/* 
+    ===================================== 
+    Section 2
+    ===================================== 
+*/
+
+#section_2_container {
+  background: #f2ede6;
+  min-height: calc(100vh - 126px);
+  width: 100vw;
+  padding: 96px;
+  position: relative;
+  z-index: 1;
+  border-bottom: 0.2px solid black;
+  border-top: 0.2px solid black;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* projects */
+#section_2_grid_container_1 {
+  border: 1px solid black;
+  border-right: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#section_2_grid_container_1_heading {
+  font-family: cursive;
+  padding: 24px;
+  font-size: 36px;
+}
+
+.section_2_grid_container_1_projects_name {
+  border-bottom: 1px solid black;
+  padding: 24px;
+  font-size: 16px;
+}
+
+.section_2_grid_container_1_projects_name:last-of-type {
+  border-bottom: 0;
+}
+
+/* Work experience */
+#section_2_grid_container_2 {
+  border: 1px solid black;
+}
+
+#section_2_grid_container_2_heading {
+  font-family: cursive;
+  padding: 24px;
+  font-size: 36px;
+}
+
+.section_2_grid_container_2_block {
+  padding: 24px;
+  border-bottom: 1px solid black;
+}
+
+.section_2_grid_container_2_block:last-of-type {
+  border-bottom: 0;
+}
+
+.section_2_grid_container_2_block_name {
+  font-family: cursive;
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.section_2_grid_container_2_block_Desc {
+  margin-bottom: 8px;
+  text-align: j;
+}
+
+.section_2_grid_container_2_block_Link {
+  text-decoration: none;
+  color: #2477c5;
+  cursor: pointer;
+}
+
+/* Education */
+#section_2_grid_container_3 {
+  border: 1px solid black;
+  border-left: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#section_2_grid_container_3_heading {
+  font-family: cursive;
+  padding: 24px;
+  font-size: 36px;
+}
+
+#section_2_grid_container_3_desc {
+  padding: 24px;
+  font-size: 16px;
+}
+
+#section_2_grid_container_3_content {
+}
+
+#section_2_grid_container_3_content_heading {
+  padding: 24px;
+}
+
+.section_2_grid_container_3_content_courses {
+  list-style-type: none;
+  padding-bottom: 8px;
+}
+
+.section_2_grid_container_3_content_courses::before {
+  content: "- ";
+}
+
+/* 
+    ===================================== 
+    Footer
+    ===================================== 
+*/
+
+#footer_container {
+  background: #fff;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.2px solid black;
+}
+#footer_container small {
+  font-family: cursive;
+  font-size: 16px;
+}
+
